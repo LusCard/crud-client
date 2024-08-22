@@ -12,10 +12,11 @@ export const renderTasks = (task) => {
 
   const $taskStatus = document.createElement("td");
   const $taskIsCompleted = document.createElement("button");
+  $taskIsCompleted.textContent = "Incomplete";
 
   $taskStatus.classList.add("px-4", "py-2");
-  $taskIsCompleted.classList.add("btn", "btn-primary");
-  $taskIsCompleted.type = "submit";
+  $taskIsCompleted.classList.add("btn", "btn-indigo-600");
+  $taskIsCompleted.type = "button";
 
   // Update task status on checkbox change
   $taskIsCompleted.addEventListener("click", (event) => {
