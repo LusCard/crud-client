@@ -17,12 +17,11 @@ taskForm.addEventListener("submit", (e) => {
 
   const $title = document.querySelector("#input-title");
   const $description = document.querySelector("#input-description");
-  const $isComplete = document.querySelector("#input-is-complete");
 
   const newTask = {
     title: $title.value,
     description: $description.value,
-    isComplete: $isComplete.value,
+    isComplete: false,
   };
 
   postTasks(newTask).then((result) => {

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/rendertasks.js"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {},
   },

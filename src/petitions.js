@@ -11,3 +11,19 @@ export const postTasks = async ({ title, description, isComplete }) => {
     headers: { "Content-Type": "application/json" },
   }).then((response) => response.json());
 };
+
+export const putTask = async (id, updatedData) => {
+  return fetch(`${API_URL}${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedData),
+  }).then((response) => response.json());
+};
+
+export const deleteTask = async (id) => {
+  return fetch(`${API_URL}${id}`, {
+    method: "DELETE",
+  });
+};
